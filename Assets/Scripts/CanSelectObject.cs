@@ -18,15 +18,17 @@ public abstract class CanSelectObject : MonoBehaviour
 
     public Action NoticeChangeRoom;
     public Action HealthUpdate;
-    public Action DeadObject;
+    public Action ObjectisDead;
 
     protected GameObject ShowTextPrefab;
 
     virtual protected void Init() 
     {
         ShowTextPrefab = Resources.Load<GameObject>("ShowText");
-        Instantiate(Resources.Load<Canvas>("Canvas/IngameState/ShowIngameState"), transform);
-        DeadObject += Dead;
+        HealthBar healthbar = Instantiate(Resources.Load<Canvas>("Canvas/IngameState/ShowIngameState"), transform).GetComponentInChildren<HealthBar>();
+        healthbar.parent = this;
+        healthbar.Init();
+        ObjectisDead += Dead;
     }
 
     virtual public void TakeDamage(CanSelectObject attackObject)
@@ -41,11 +43,21 @@ public abstract class CanSelectObject : MonoBehaviour
         {
             UIManager.Instance.OverInfoState(this);
         }
+        if (CurrentHealth <= 0) 
+        {
+            CurrentHealth = 0;
+            attackObject.GetComponent<CanSelectObject>().Resettarget();
+            attackObject.targetObject = null;
+            NoticeChangeRoom = null;
+            ObjectisDead.Invoke();
+        }
     }
 
     virtual public void Dead() 
     {
-        
+        Resettarget();
+        Destroy(gameObject);
+        //gameObject.SetActive(false);
     }
 
     virtual public void Heal(float value)
@@ -72,8 +84,10 @@ public abstract class CanSelectObject : MonoBehaviour
 
     void TargetChangedRoom()
     {
-        print("asdf");
-        Path = RoomManager.Instance.FindPath(this, targetObject.GetComponent<CanSelectObject>().currentRoom);
+        if (targetObject)
+        {
+            Path = RoomManager.Instance.FindPath(this, targetObject.GetComponent<CanSelectObject>().currentRoom);
+        }
     }
 
     virtual protected void Resettarget()
@@ -83,9 +97,8 @@ public abstract class CanSelectObject : MonoBehaviour
         if (targetObject) 
         {
             targetObject.GetComponent<CanSelectObject>().NoticeChangeRoom -= TargetChangedRoom;
-            targetObject = null;
         }
-
+        targetObject = null;
         targetCore = null;
     }
 

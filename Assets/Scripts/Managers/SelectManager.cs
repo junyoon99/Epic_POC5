@@ -45,6 +45,8 @@ public class SelectManager : MonoBehaviour
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D[] hitObjects = Physics2D.RaycastAll(mousePosition,Vector2.zero);
+        AddCore addCore = null;
+
         foreach (RaycastHit2D hit in hitObjects) 
         {
             if (hit.collider.GetComponent<CanSelectObject>() && !copy.Contains(hit.collider.GetComponent<CanSelectObject>()))
@@ -53,7 +55,17 @@ public class SelectManager : MonoBehaviour
                 StatOverCanvas();
                 return;
             }
+            if (hit.collider.GetComponent<AddCore>()) 
+            {
+                addCore = hit.collider.GetComponent<AddCore>();
+            }
         }
+
+        if (addCore != null) 
+        {
+            UIManager.Instance.InstallCore.OpenCanvas(addCore.GetCurrentRoom());
+        }
+
         StatOverCanvas();
     }
 
@@ -178,6 +190,10 @@ public class SelectManager : MonoBehaviour
         print("Use : " + targetCore.name);
         foreach (CanSelectObject monster in SelectedObjects)
         {
+            if (monster == null) 
+            {
+                continue;
+            }
             // 몬스터 아니면 스킵
             if (!monster.GetComponent<Monster>()) 
             {
@@ -193,6 +209,10 @@ public class SelectManager : MonoBehaviour
     {
         foreach (CanSelectObject monster in SelectedObjects) 
         {
+            if (monster == null)
+            {
+                continue;
+            }
             // 몬스터 아니면 스킵
             if (!monster.GetComponent<Monster>()) 
             {
@@ -209,6 +229,10 @@ public class SelectManager : MonoBehaviour
         print("Attack!" + targetEnemy.name);
         foreach (CanSelectObject monster in SelectedObjects) 
         {
+            if (monster == null)
+            {
+                continue;
+            }
             // 몬스터 아니면 스킵
             if (!monster.GetComponent<Monster>())
             {

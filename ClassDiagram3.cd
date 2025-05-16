@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="@PlayerInput" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAABIAEAAACBIBACAgBGQEAAAgAIBQAIA=</HashCode>
+      <FileName>Assets\InputActions\PlayerInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CanSelectObject">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGCAAAAEACAKABAAACAwAAQAIAAAQAAACiAIAQhA=</HashCode>
+      <FileName>Assets\Scripts\CanSelectObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraManager" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAAAAgAEACAAAIAEAAAAAAASAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\CameraManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="19" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEEAAAAAAAAAAAAACgAABACAQgCIAAAQAgAAACAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManager" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\InputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomManager" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAACgAAAgAAAAAAAAAAAAAAIAAQAAACAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\RoomManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectManager">
+    <Position X="16.5" Y="6" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SelectManager.selectedPlace" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Managers\SelectManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAAAEGAAQEAAAAABASAAQAAAAAEo=</HashCode>
+      <FileName>Assets\Scripts\Managers\SelectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAEAAAAAAAAAAAAAACAgAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Adventurer">
+    <Position X="1.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAiAAAgAEAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Adventurer\Adventurer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanMoveObjects">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABABEAAAAEAAAAAAAQCAAYQIAAgAAAAGAAAgAAY=</HashCode>
+      <FileName>Assets\Scripts\Object\CanMoveObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClosePanel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\InstallCore\ClosePanel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoreList" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\InstallCore\CoreList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoreListElement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAIAAAEAAAAAAAIAIAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\InstallCore\CoreListElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InstallCoreCanvas" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\InstallCore\InstallCoreCanvas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectInfo_HealthBar" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\SelectObjectInfo\SelectInfo_HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectInfo_Name" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\SelectObjectInfo\SelectInfo_Name.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectInfo_ProfileIMG" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\SelectObjectInfo\SelectInfo_ProfileIMG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectInfo_ShowStateArea" Collapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAUA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\SelectObjectInfo\SelectInfo_ShowStateArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectObjectInfo" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEKAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Object\Canvas\SelectObjectInfo\SelectObjectInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommingAdventurer" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAASAAQAAAAAAAAAAAAAAAAAAIAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\CommingAdventurer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AddCore" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Core\AddCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoreFacilities">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Core\CoreFacilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealingCore">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABQAAEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Core\HealingCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeCore">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Core\TimeCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIiAAAAAAEAAAAAAAAAgAEAAEAAIAAAAAAIACAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAAABAAAAAAAAAAAAAAAAAAAgCAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Monster\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monster">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Object\Monster\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Room" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAFKAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Object\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueue&lt;T&gt;" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAABQAAAAAAAQAAAAABAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Structure\PriorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBrain" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAACAAAAAAAAAAAAAAAAgAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Test\TestBrain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestMonbehavior" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAACIAAAAAIBAAIAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Test\TestMonbehavior.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShowText" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAgAAAaiAAAACAAAAAAAAAACAAACAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TextEffect\ShowText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TestInterface" Collapsed="true">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACIAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Test\TestInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

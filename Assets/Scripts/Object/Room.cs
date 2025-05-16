@@ -22,7 +22,6 @@ public class Room : MonoBehaviour
         {
             moveObject.currentRoom = this;
             moveObject.NoticeChangeRoom?.Invoke();
-            
         }
         if (collision.TryGetComponent<CoreFacilities>(out CoreFacilities Core))
         {
@@ -35,11 +34,22 @@ public class Room : MonoBehaviour
     {
         if (Core != null)
         {
-            tmp.enabled = false;
+            if (tmp) 
+            {
+                tmp.enabled = false;
+            }
         }
         else
         {
-            tmp.enabled = true;
+            if (tmp)
+            {
+                tmp.enabled = true;
+            }
         }
+    }
+
+    public void InstallCore(GameObject Core) 
+    {
+        Instantiate(Core, transform.position, Quaternion.identity, transform.parent);
     }
 }

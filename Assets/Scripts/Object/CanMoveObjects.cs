@@ -35,7 +35,7 @@ public class CanMoveObjects : CanSelectObject
     protected void MoveAI()
     {
         // 가야 할 문이 있으면 제일 우선순위
-        if (Path.Count > 0)
+        if (Path != null && Path.Count > 0)
         {
             MoveFollowPath();
         }
@@ -79,7 +79,7 @@ public class CanMoveObjects : CanSelectObject
             rb2d.linearVelocityX = 0;
             isArrived = true;
 
-            if (Path.Count > 0)
+            if (Path != null && Path.Count > 0)
             {
                 TryEnterDoor(Path[0].Item2);
                 Path.RemoveAt(0);
@@ -129,14 +129,16 @@ public class CanMoveObjects : CanSelectObject
 
     protected void UseCore()
     {
-        Debug.Log("앙~");
         targetCore.GetComponent<CoreFacilities>().CoreFunction(this);
     }
 
     protected void Attack()
     {
-        Debug.Log("Attack!" + targetObject.name);
-        targetObject.GetComponent<CanSelectObject>().TakeDamage(this);
+        // 시체매너
+        if (targetObject.GetComponent<CanSelectObject>().CurrentHealth > 0) 
+        {
+            targetObject.GetComponent<CanSelectObject>().TakeDamage(this);
+        }
     }
 
     public void setTargetPos(Vector2 position, Room room)

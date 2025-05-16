@@ -9,7 +9,7 @@ public class Adventurer : CanMoveObjects
     {
         Init();
         moveSpeed = 3f;
-        AttackPower = 1f;
+        AttackPower = 2f;
         MaxHealth = 555f;
         CurrentHealth = MaxHealth;
         attackRange = new Vector2(0.2f, 1);
@@ -18,7 +18,7 @@ public class Adventurer : CanMoveObjects
     void Update()
     {
         TestPathCopy();
-        FindCore();
+        FindObject();
     }
 
     private void FixedUpdate()
@@ -29,26 +29,44 @@ public class Adventurer : CanMoveObjects
     void TestPathCopy() 
     {
         TestPath.Clear();
-        foreach (Tuple<Door, int> tuple in Path) 
+        if (Path == null) return;
+        foreach (Tuple<Door, int> tuple in Path)
         {
             TestPath.Add(tuple.Item1);
         }
     }
 
-    void FindCore() 
+    void FindObject() 
     {
-        if (targetObject == null) 
+        // 타겟 오브젝트가 없으면 찾기
+        if ((targetObject == null && currentRoom != null) || Path == null)
         {
-            setTargetObject(FindAnyObjectByType<CoreFacilities>().gameObject);
-            Path = RoomManager.Instance.FindPath(this, targetObject.GetComponent<CanSelectObject>().currentRoom);
+            // 코어 시설 먼저 찾아보기
+            CoreFacilities findCore = FindAnyObjectByType<CoreFacilities>();
+            if (findCore != null)
+            {
+                setTargetObject(findCore.gameObject);
+                Path = RoomManager.Instance.FindPath(this, targetObject.GetComponent<CanSelectObject>().currentRoom);
+            }
+            else
+            {
+                // 맵에 코어 시설이 없으면 몬스터 대상찾기
+                Monster findMonster = FindAnyObjectByType<Monster>();
+                if (findMonster != null)
+                {
+                    setTargetObject(findMonster.gameObject);
+                    Path = RoomManager.Instance.FindPath(this, targetObject.GetComponent<CanSelectObject>().currentRoom);
+                }
+            }
         }
     }
 
     public override void TakeDamage(CanSelectObject attackObject)
     {
         base.TakeDamage(attackObject);
-        if (targetObject == null || targetObject.GetComponent<CoreFacilities>()) 
+        if (targetObject == null || (targetObject != null && targetObject.GetComponent<CoreFacilities>()))
         {
+            print("날 때려?");
             setTargetObject(attackObject.gameObject);
         }
     }

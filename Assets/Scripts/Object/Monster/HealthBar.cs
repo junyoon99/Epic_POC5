@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MonsterHealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     Image fill;
-    CanSelectObject parent;
-
-    private void Awake()
+    public CanSelectObject parent;
+    public void Init()
     {
         fill = GetComponent<Image>();
-        parent = transform.root.GetComponent<CanSelectObject>();
         parent.HealthUpdate += HealthUpdate;
     }
 

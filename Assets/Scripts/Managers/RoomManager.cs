@@ -81,6 +81,7 @@ public class RoomManager : MonoBehaviour
     }
     public List<Tuple<Door, int>> FindPath(CanSelectObject moveObject, Room targetRoom)
     {
+        if (!moveObject || !targetRoom) return null;
         // 탐색예약할 큐
         PriorityQueue<Door> openSet = new PriorityQueue<Door>();
         // 지나온 곳 저장

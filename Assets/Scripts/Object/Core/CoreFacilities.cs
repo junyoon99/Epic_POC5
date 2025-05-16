@@ -1,8 +1,6 @@
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEngine;
-
 public class CoreFacilities : CanSelectObject
 {
+    public int Price;
     override protected void Init()
     {
         base.Init();

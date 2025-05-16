@@ -1,20 +1,16 @@
-using System.Diagnostics;
 using UnityEngine;
 
-public class HealingCore : CoreFacilities
+public class TimeCore : CoreFacilities
 {
-    float healAmount = 10;
     private void Awake()
     {
         Init();
-        MaxHealth = 3000;
+        MaxHealth = 2000;
         CurrentHealth = MaxHealth;
     }
-
-    public override void CoreFunction(CanMoveObjects user)
+    private void OnEnable()
     {
-        base.CoreFunction(user);
-        user.Heal(healAmount);
+        GameManager.Instance.TimeCores.Add(gameObject);
     }
 
     private void OnDisable()
@@ -24,5 +20,6 @@ public class HealingCore : CoreFacilities
             currentRoom.Core = null;
             currentRoom.CheckCoreInCurrentRoom();
         }
+        GameManager.Instance.TimeCores.Remove(gameObject);
     }
 }
